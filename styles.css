@@ -1,0 +1,192 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Staatliches', cursive;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+:root {
+  --hue-neutral: 220;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+.container {
+  width: 400px;
+  max-width: 80%;
+  height: 100vh;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  margin-left: 0px;
+justify-content: start;
+}
+img{
+  width: 350px;
+  height: 170px;
+  padding-left: 20px;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.btn-grid {
+  display:grid;
+  grid-template-columns: repeat(1, auto);
+  width: max-content;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  width: 400px;
+  height: 50px;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn, .pass-btn,.help-btn, .stop-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  letter-spacing: 3px;
+}
+.start-btn{
+  margin-top: 50vh;
+}
+.next-btn, .pass-btn,.help-btn, .stop-btn{
+  margin-top: 40px;
+  background-color: orange;
+  color: blue;
+}
+button .btn{
+  width: 100%;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  vertical-align: auto;
+}
+
+#answer-buttons{
+display: block;
+width: 300px;
+}
+#answer-buttons ul{
+   --hue: var(--hue-neutral);
+  border-radius: 5px;
+  color: white;
+  outline: none;
+  display:block!important;
+  width: max-content;
+}
+
+#question-container{
+  padding-top: 50vh;
+}
+#question{
+  text-align: center;
+  font-size: 25px;
+}
+.hide {
+  display: none;
+}
+.tve{   /*  FOTO TV */
+  width: 50%;
+  height: 90%;
+  margin-left: 700px;
+  position: absolute;
+  margin-top: auto;
+  vertical-align: auto;
+}
+video {
+  object-fit: cover;
+}
+
+
+@media (min-width: 500px) {
+  video{
+    height: 600px;
+    width: 690px;
+    margin-left: 50vw;
+    position: absolute;
+    margin-top: 10px;
+    padding-bottom: 180px;
+    filter:  contrast(100%) sepia(10%) brightness(100%) drop-shadow(100%) blur(100%)  opacity(100%) ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px;
+  }
+  .filter  {
+  opacity: 25%;
+  height: 600px;
+    width: 715px;
+    margin-left: 49vw;
+    position: absolute;
+    margin-top: 5px;
+}
+.tve{
+  height: 80vh;
+  width: 825px;
+  margin-left: 45vw;
+}
+}
+.yellow{
+  background-color: yellow;
+  margin-top: 20px;
+  display: inline-block;
+  width: 40%;
+  margin-left: 20px;
+
+}

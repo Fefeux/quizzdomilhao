@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <title>Show do Milhão</title>
+</head>
+<body>
+  <audio src="milhao.mp3" class="hide" id="milhao"></audio>
+  <audio src="uni.mp3" class="hide" id="uni"></audio>
+  <audio src="ultima.mp3" class="hide" id="ultima"></audio>
+  <img src="tv1.png" class="tve" >
+  <video autoplay playsinline></video>
+  <img src="filter90s.gif"  class="filter" alt="">
+  <div class="container">
+    <img src="logoshow.jpg" alt="Logo Show do Milhão">
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <ul id="answer-buttons" class="btn-grid">
+       <li> <button class="btn full">Answer 1</button></li> 
+       <li> <button class="btn full">Answer 2</button></li>
+       <li> <button class="btn full">Answer 3</button></li>
+       <li> <button class="btn full">Answer 4</button></li>
+      </ul>
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Próx</button>
+      <button id="pass-btn" class="pass-btn btn hide">Pulo</button>
+      <button id="help-btn" class="help-btn btn hide">Ajuda </button>
+      <button id="stop-btn" class="stop-btn btn hide">Para <audio src="parou.mp3" class="hide" id="parou"></audio></button>
+     
+    </div> 
+     <div class="yellow hide ">50% do prêmio</div>
+      <div class="yellow hide premio">Prêmio atual</div>
+      <div class="yellow hide"></div>  
+  </div>
+  
+</body>
+</html>
